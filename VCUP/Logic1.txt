@@ -1,0 +1,19 @@
+# Logic for the Versa Concerto SASE user profile code as mentioned below:-
+
+1. Authentication: The script logs into the Versa Networks API using credentials and retrieves CSRF tokens.
+2. API Calls: It invokes both GET and POST requests for managing tenants, user groups, and user data.
+Key Sections in the Script:
+1. Authentication:
+2. Fetches CSRF tokens.
+3. Authenticates using a POST request.
+4. GET API Call:
+5. Fetches a tenant summary.
+6. Retrieves authentication profile summaries.
+7. Extracts user-related information from an Excel sheet (though the Excel reading part is cut off in the output)
+8. POST Payload Construction:
+9. Constructs a payload containing user details (e.g., username, password, email, etc.) and posts it to an API endpoint.
+10.Final Step:
+11.Makes a POST request with the constructed payload to create or manage users in the Versa system.
+12.Creates a new user group and users within a tenant.
+13.If you re-run the code again it will error "400" ("There is already one SASE_VERSA_DIRECTORY_AUTHENTICATION rule.  Only one is allowed.")
+
